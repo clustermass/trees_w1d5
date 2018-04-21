@@ -52,7 +52,7 @@ class KnightPathFinder
       path.unshift(found_node.value)
       found_node = found_node.parent
     end
-    p path
+    path
   end
 
 
@@ -63,5 +63,5 @@ if __FILE__ == $0
 
   new_knight = KnightPathFinder.new([0,0])
   new_knight.build_move_tree
-  new_knight.find_path([4,5])
+p  new_knight.find_path([4,5])
 end
