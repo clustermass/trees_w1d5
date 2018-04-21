@@ -45,6 +45,15 @@ class KnightPathFinder
     valid_moves
   end
 
+  def find_path(pos)
+    path = []
+    found_node = @tree.dfs(pos)
+    until found_node == nil
+      path.unshift(found_node.value)
+      found_node = found_node.parent
+    end
+    p path
+  end
 
 
 end
@@ -54,5 +63,5 @@ if __FILE__ == $0
 
   new_knight = KnightPathFinder.new([0,0])
   new_knight.build_move_tree
-
+  new_knight.find_path([4,5])
 end

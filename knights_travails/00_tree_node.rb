@@ -1,6 +1,6 @@
 class PolyTreeNode
 
-  attr_accessor :children, :value
+  attr_accessor :children, :value, :parent
   def initialize(value)
     @value = value
     @parent = nil
